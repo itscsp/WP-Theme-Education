@@ -1,4 +1,4 @@
-#SCSS Notes
+# SCSS Notes
 CSS Resets - Advanance - https://github.com/necolas/normalize.css/blob/v1/normalize.css
            - Simple - https://piccalil.li/blog/a-modern-css-reset/
 
