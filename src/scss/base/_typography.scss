@@ -1,0 +1,33 @@
+@import '../abstracts/variables';
+
+/* -----------------------------------------------------------------------------
+ *
+ * Typography: Headings
+ *
+ * ----------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------
+ * Heading: H1
+ * ------------------------------------------------------------------------- */
+
+.h1{
+	font-family: $heading-ff-1;
+	font-size: 56px;
+	line-height: 1.2;
+	font-style: normal;
+	font-weight: normal;
+	letter-spacing: -0,1px;
+}
+
+.h2{
+	font-family: $heading-ff-2;
+	font-size: 48px;
+	line-height: 1.2;
+	font-style: normal;
+	font-weight: normal;
+	letter-spacing: -0.1px;
+}
+
+.regular{
+	font-family: $main-ff;
+}

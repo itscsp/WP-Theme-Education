@@ -1,0 +1,57 @@
+/* sr :- screen reader */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+.skip-to-content {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  font-family: $main-ff;
+  text-decoration: none;
+  transition: transform 250ms ease-in;
+}
+
+.skip-to-content:focus {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  z-index: 12001;
+  padding: 0 24px;
+  border: 0;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.15;
+  clip: inherit;
+  background-color: #292c2f;
+  color: #fff;
+  transition: none;
+}
+
+.d-none{
+  display: none;
+}
+
+body.overflow-hidden{
+  overflow: hidden;
+}

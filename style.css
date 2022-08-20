@@ -6,3 +6,79 @@ version:1.0
 
 */
 
+/* -----------------------------------------------------------------------------
+ *
+ * Typography: Fonts
+ *
+ * ----------------------------------------------------------------------------- */
+
+ @font-face {
+	font-family: 'Canela Web';
+	src:
+		url('./assets/fonts/canela/Canela-Regular-Web.woff2') format('woff2'),
+		url('./assets/fonts/canela/Canela-Regular-Web.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'Canela Deck Web';
+	src:
+		url('./assets/fonts/canela/CanelaDeck-Regular-Web.woff2') format('woff2'),
+		url('./assets/fonts/canela/CanelaDeck-Regular-Web.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'GT America Standard Bold';
+	src:
+		url('./assets/fonts/gt-america/GT-America-Standard-Bold.woff2') format('woff2'),
+		url('./assets/fonts/gt-america/GT-America-Standard-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'GT America Standard Medium';
+	src:
+		url('./assets/fonts/gt-america/GT-America-Standard-Medium.woff2') format('woff2'),
+		url('./assets/fonts/gt-america/GT-America-Standard-Medium.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'GT America Standard Regular';
+	src:
+		url('./assets/fonts/gt-america/GT-America-Standard-Regular.woff2') format('woff2'),
+		url('./assets/fonts/gt-america/GT-America-Standard-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'GT America Standard Regular Italic';
+	src:
+		url('./assets/fonts/gt-america/GT-America-Standard-Regular-Italic.woff2') format('woff2'),
+		url('./assets/fonts/gt-america/GT-America-Standard-Regular-Italic.woff') format('woff');
+	font-weight: 400;
+	font-style: italic;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'core-icons';
+	src:
+		url('https://www.harvard.edu//wp-content/themes/core/assets/fonts/theme/icons-core/core-icons.ttf?4g884c') format('truetype'),
+		url('https://www.harvard.edu//wp-content/themes/core/assets/fonts/theme/icons-core/core-icons.woff?4g884c') format('woff'),
+		url('https://www.harvard.edu//wp-content/themes/core/assets/fonts/theme/icons-core/core-icons.svg?4g884c#core-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}

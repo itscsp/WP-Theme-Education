@@ -45,4 +45,12 @@ sass/
 |
 *****************************************************/
 
+@import './abstracts/variables';
+@import './abstracts/mixins';
+@import './abstracts/utility';
+
 @import './base/reset';
+@import './base/typography';
+
+
+@import './layout/header';
