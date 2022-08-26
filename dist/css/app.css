@@ -779,6 +779,10 @@ table {
   top: -100%;
   visibility: hidden;
   transition: 500ms ease-in;
+  background-image: url("https://www.harvard.edu/wp-content/uploads/2020/11/041919_flowers_046-1152x768.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .site-nav * {
   scrollbar-width: thin;
@@ -794,6 +798,8 @@ table {
   align-items: stretch;
   height: 90px;
   padding-left: 40px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
 }
 .site-nav__header .logo__wrap img {
   width: 225px;
@@ -827,15 +833,34 @@ table {
 }
 .site-nav__main {
   height: calc(100% - 180px);
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  grid-template-rows: auto;
+  display: flex;
+  background: #000;
+  opacity: 0.8;
+}
+.site-nav__main .nav-primary__col-0 {
+  width: 350px;
+  margin-right: 30px;
 }
 .site-nav__main .nav-primary__col-1 {
-  background: pink;
+  width: 350px;
 }
-.site-nav__main .nav-primary__col-2 {
-  background: blue;
+.site-nav__main .nav-primary__col-1 .nav-primary__item:first-child {
+  margin-top: 25px;
+}
+.site-nav__main .nav-primary__col-1 .nav-primary__list.inactive {
+  display: none;
+}
+.site-nav__main .nav-primary__col-1 .nav-primary__item.active {
+  display: block;
+}
+.site-nav__main .nav-primary__col-2 .nav-primary__item:first-child {
+  margin-top: 25px;
+}
+.site-nav__main .nav-primary__col-2 .nav-primary__list.inactive {
+  display: none;
+}
+.site-nav__main .nav-primary__col-2 .nav-primary__item.active {
+  display: block;
 }
 .site-nav__main .nav-primary__col-0, .site-nav__main .nav-primary__col-1, .site-nav__main .nav-primary__col-2 {
   overflow: auto;
@@ -845,10 +870,10 @@ table {
   padding: 40px;
   margin: 0px;
 }
-.site-nav__main .nav-primary__list .nav-primary__item:not(first-child) {
+.site-nav__main .nav-primary__list .nav-primary__item:not(:first-child) {
   margin-top: 25px;
 }
-.site-nav__main .nav-primary__list .nav-primary__item button {
+.site-nav__main .nav-primary__list .nav-primary__item .nav-primary__action-lvl-0 {
   border: none;
   background: transparent;
   color: #fff;
@@ -856,17 +881,37 @@ table {
   font-weight: 900;
   font-family: "Canela Deck Web";
 }
-.site-nav__main .nav-primary__list .nav-primary__item.lvl1-inactive .nav-primary__action-text {
+.site-nav__main .nav-primary__list .nav-primary__item .nav-primary__action-lvl-1 {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: -0.1px;
+  font-family: "GT America Standard Regular";
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: left;
+}
+.site-nav__main .nav-primary__list .nav-primary__item.lvl0-inactive .nav-primary__action-text, .site-nav__main .nav-primary__list .nav-primary__item.lvl1-inactive .nav-primary__action-text, .site-nav__main .nav-primary__list .nav-primary__item.lvl2-inactive .nav-primary__action-text {
   color: #8996a0;
 }
-.site-nav__main .nav-primary__list .nav-primary__item.lvl1-inactive .nav-primary__action-lvl-0:hover .nav-primary__action-text {
+.site-nav__main .nav-primary__list .nav-primary__item.lvl0-inactive .nav-primary__action-lvl-0:hover .nav-primary__action-text,
+.site-nav__main .nav-primary__list .nav-primary__item.lvl0-inactive .nav-primary__action-lvl-1:hover .nav-primary__action-text,
+.site-nav__main .nav-primary__list .nav-primary__item.lvl0-inactive .nav-primary__action-lvl-2:hover .nav-primary__action-text, .site-nav__main .nav-primary__list .nav-primary__item.lvl1-inactive .nav-primary__action-lvl-0:hover .nav-primary__action-text,
+.site-nav__main .nav-primary__list .nav-primary__item.lvl1-inactive .nav-primary__action-lvl-1:hover .nav-primary__action-text,
+.site-nav__main .nav-primary__list .nav-primary__item.lvl1-inactive .nav-primary__action-lvl-2:hover .nav-primary__action-text, .site-nav__main .nav-primary__list .nav-primary__item.lvl2-inactive .nav-primary__action-lvl-0:hover .nav-primary__action-text,
+.site-nav__main .nav-primary__list .nav-primary__item.lvl2-inactive .nav-primary__action-lvl-1:hover .nav-primary__action-text,
+.site-nav__main .nav-primary__list .nav-primary__item.lvl2-inactive .nav-primary__action-lvl-2:hover .nav-primary__action-text {
   background-size: 0 1px !important;
   color: #fff;
 }
-.site-nav__main .nav-primary__list .nav-primary__item.lvl1-active .nav-primary__action-lvl-0 .nav-primary__action-text {
+.site-nav__main .nav-primary__list .nav-primary__item.lvl0-active .nav-primary__action-lvl-0 .nav-primary__action-text,
+.site-nav__main .nav-primary__list .nav-primary__item.lvl0-active .nav-primary__action-lvl-1 .nav-primary__action-text, .site-nav__main .nav-primary__list .nav-primary__item.lvl1-active .nav-primary__action-lvl-0 .nav-primary__action-text,
+.site-nav__main .nav-primary__list .nav-primary__item.lvl1-active .nav-primary__action-lvl-1 .nav-primary__action-text {
   background-size: 100% 1px;
 }
-.site-nav__main .nav-primary__list .nav-primary__action-lvl-0:hover .nav-primary__action-text {
+.site-nav__main .nav-primary__list .nav-primary__item .nav-primary__action-lvl-0:hover .nav-primary__action-text,
+.site-nav__main .nav-primary__list .nav-primary__item .nav-primary__action-lvl-1:hover .nav-primary__action-text {
   background-size: 100% 1px;
 }
 .site-nav__main .nav-primary__list .nav-primary__action-text {
@@ -877,11 +922,17 @@ table {
   transition: background-size 0.3s;
   position: relative;
 }
+.site-nav__main .nav-primary__list .nav-primary__desc {
+  color: #fff;
+  padding-inline: 4px;
+  margin-top: 5px;
+}
 .site-nav__footer {
   height: 90px;
   display: flex;
   align-items: center;
   border-top: 1px solid;
+  background: #000;
 }
 .site-nav__footer .nav-footer__links-wrapper {
   display: flex;

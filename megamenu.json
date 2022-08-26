@@ -1,0 +1,27 @@
+[
+	{
+		"navItem":"Academics",
+		"navLink":"https://www.harvard.edu/",
+		"navBackground":"https: //www.harvard.edu/wp-content/uploads/2021/01/053019_COM_SM_3758-1152x767.jpeg",
+		"navSub":[
+			{
+				"navItem":"Explore all programs",
+				"navLink":"https://www.harvard.edu/",
+				"navDescription":"Browse all of our undergraduate concentrations, graduate degrees, and professional certificates.",
+				"navHasSub":false,
+				"navBackground":null,
+				"isNavIntro":true
+			}
+
+			{
+				"navItem":"Harvard Schools",
+				"navLink":"https://www.harvard.edu/",
+				"navDescription":null,
+				"navHasSub":true,
+				"navBackground":'',
+				"isNavIntro":false,
+			}
+
+		]
+	}
+]

@@ -173,11 +173,15 @@
   // right: -100vw;
   visibility: hidden;
   transition: 500ms ease-in;
+  background-image: url('https://www.harvard.edu/wp-content/uploads/2020/11/041919_flowers_046-1152x768.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   & * {
-        scrollbar-width: thin;
-        scrollbar-color: #464a4f #292c2f;
-    }
+    scrollbar-width: thin;
+    scrollbar-color: #464a4f #292c2f;
+  }
 
   &.open {
     // right: 0;
@@ -186,11 +190,15 @@
   }
 
   &__header {
+
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     height: 90px;
     padding-left: 40px;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+
 
     .logo__wrap img {
       width: 225px;
@@ -229,140 +237,169 @@
 
   &__main {
     height: calc(100% - 180px);
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    grid-template-rows: auto;
+    display: flex;
+    background: #000;
+    opacity: 0.8;
 
+    .nav-primary {
+      &__col-0 {
+          width: 350px;
+          margin-right: 30px;
+      }
 
-    .nav-primary{
+      &__col-1 {
+        width: 350px;
 
-        &__col-0{
-
+        .nav-primary__item:first-child {
+            margin-top: 25px;
         }
 
-        &__col-1{
-
-            background: pink;
+        & .nav-primary__list.inactive {
+            display: none;
         }
 
-        &__col-2{
+        .nav-primary__item.active{
+            display: block;
+        }
+      }
 
-            background: blue;
+      &__col-2 {
+        .nav-primary__item:first-child {
+            margin-top: 25px;
         }
 
-        &__col-0,
-        &__col-1,
-        &__col-2{
-            overflow: auto;
+        & .nav-primary__list.inactive {
+            display: none;
         }
 
+        .nav-primary__item.active{
+            display: block;
+        }
+      }
 
+      &__col-0,
+      &__col-1,
+      &__col-2 {
+        overflow: auto;
+      }
 
-        &__list {
-            list-style: none;
-            padding: 40px;
-            margin: 0px;
+      &__list {
+        list-style: none;
+        padding: 40px;
+        margin: 0px;
 
-            .nav-primary__item:not(first-child) {
-                margin-top: 25px;
-            }
+        .nav-primary__item:not(:first-child) {
+          margin-top: 25px;
+        }
 
-            .nav-primary__item button {
-                border: none;
-                background: transparent;
-                color: $white;
-                font-size: 56px;
-                font-weight: 900;
-                font-family: $heading-ff-1;
-            }
+        .nav-primary__item {
+          & .nav-primary__action-lvl-0 {
+            border: none;
+            background: transparent;
+            color: $white;
+            font-size: 56px;
+            font-weight: 900;
+            font-family: $heading-ff-1;
+          }
 
-            .nav-primary__item.lvl1-inactive{
-                .nav-primary__action-text {
-                    color: $gray-800;
-                }
+          & .nav-primary__action-lvl-1 {
+            border: none;
+            background: transparent;
+            color: $white;
+            font-weight: 900;
+            letter-spacing: -0.1px;
+            font-family: $main-ff;
+            font-size: 20px;
+            line-height: 1.5;
+            text-align: left;
+          }
 
-                .nav-primary__action-lvl-0:hover .nav-primary__action-text {
-                    background-size: 0 1px !important;
-                    color: $white;
-                }
-            }
-
-            .nav-primary__item.lvl1-active{
-                .nav-primary__action-lvl-0 .nav-primary__action-text {
-                    background-size: 100% 1px;
-                }
-
-            }
-
-
-
-            .nav-primary__action-lvl-0:hover .nav-primary__action-text {
-                background-size: 100% 1px;
-            }
-
-            //To creata growing hover effect follow.
+          &.lvl0-inactive,
+          &.lvl1-inactive,
+          &.lvl2-inactive {
             .nav-primary__action-text {
-                background-image: linear-gradient($white,$white);
-                background-position: 0 100%;
-                background-repeat: no-repeat;
-                background-size: 0 1px;
-                transition: background-size .3s;
-                position: relative;
+              color: $gray-800;
             }
 
+            .nav-primary__action-lvl-0:hover .nav-primary__action-text,
+            .nav-primary__action-lvl-1:hover .nav-primary__action-text,
+            .nav-primary__action-lvl-2:hover .nav-primary__action-text {
+              background-size: 0 1px !important;
+              color: $white;
+            }
+          }
 
+          &.lvl0-active,
+          &.lvl1-active {
+            .nav-primary__action-lvl-0 .nav-primary__action-text,
+            .nav-primary__action-lvl-1 .nav-primary__action-text {
+              background-size: 100% 1px;
+            }
+          }
+
+          .nav-primary__action-lvl-0:hover .nav-primary__action-text,
+          .nav-primary__action-lvl-1:hover .nav-primary__action-text {
+            background-size: 100% 1px;
+          }
         }
 
+        //To creata growing hover effect follow.
+        .nav-primary__action-text {
+          background-image: linear-gradient($white, $white);
+          background-position: 0 100%;
+          background-repeat: no-repeat;
+          background-size: 0 1px;
+          transition: background-size 0.3s;
+          position: relative;
+        }
 
+        .nav-primary__desc{
+            color: $white;
+            padding-inline: 4px;
+            margin-top: 5px;
+        }
 
+      }
     }
-
-
-
   }
 
-  &__footer{
-      height: 90px;
+  &__footer {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid;
+    background: #000;
+
+    .nav-footer__links-wrapper {
+      display: flex;
+      align-items: center;
+      padding-left: 40px;
+
+      .nav-footer__label {
         display: flex;
         align-items: center;
-        border-top: 1px solid;
+        gap: 10px;
+        font-size: 18px;
+        margin-right: 18px;
+        color: $gray-800;
+      }
 
-
-    .nav-footer__links-wrapper{
+      .nav-footer__items {
+        padding: 0px;
         display: flex;
         align-items: center;
-        padding-left: 40px;
+        margin: 0px;
+        gap: 15px;
 
+        a {
+          color: $white;
+          font-weight: 700;
 
-        .nav-footer__label{
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 18px;
-            margin-right: 18px;
+          &:hover {
             color: $gray-800;
-
+          }
         }
-
-        .nav-footer__items{
-            padding: 0px;
-            display: flex;
-            align-items: center;
-            margin: 0px;
-            gap: 15px;
-
-            a{
-                color: $white;
-                font-weight: 700;
-
-                &:hover{
-                    color: $gray-800;
-                }
-            }
-        }
+      }
     }
-
   }
 }
-
-

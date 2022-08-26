@@ -31,9 +31,45 @@ if(siteNavBtnClose){
 document.addEventListener("DOMContentLoaded", function(event) {
     //insert code here
 
-
     $('.nav-primary__action.nav-primary__action-lvl-0').on('click', function(){
+        console.log($('.nav-primary__col-1').children().addClass('inactive'))
+        console.log($('.nav-primary__col-2').children().addClass('inactive'))
+
+        $('.nav-primary__col-1 .nav-primary__list').children().removeClass('lvl1-active').removeClass('lvl1-inactive');
+
+
+        let parentNav, childNav
+
+        $(this).parent().addClass('lvl0-active').removeClass('lvl0-inactive').siblings().removeClass('lvl0-active').addClass('lvl0-inactive');
+
+        parentNav = $(this).attr('id');
+
+        childNav = $(`.nav-primary__col-1 .nav-primary__list.${parentNav}`)
+
+        console.log(childNav);
+
+
+        childNav.removeClass('inactive');
+        childNav.siblings().addClass('inactive');
+
+
+    });
+
+    $('.nav-primary__action.nav-primary__action-lvl-1').on('click', function(){
+        let parentNav, childNav
+
         $(this).parent().addClass('lvl1-active').removeClass('lvl1-inactive').siblings().removeClass('lvl1-active').addClass('lvl1-inactive');
+
+        parentNav = $(this).attr('id');
+
+        childNav = $(`.nav-primary__col-2 .nav-primary__list.${parentNav}`)
+
+        console.log(childNav);
+
+
+        childNav.removeClass('inactive');
+        childNav.siblings().addClass('inactive');
+
     });
 
  });
